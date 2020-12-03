@@ -44,7 +44,7 @@ class CronTask extends ActiveRecord
             [['schedule', 'route'], 'string', 'max' => 255],
             [['schedule'], 'match', 'pattern' => self::SCHEDULE_REGEX],
             [['schedule', 'route'], 'required'],
-            [['route']], 'filter', 'filter' => 'strtolower'],
+            [['route'], 'filter', 'filter' => 'strtolower'],
         ];
     }
 
