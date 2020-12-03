@@ -14,8 +14,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'schedule')->textInput(['maxlength' => true, 'placeholder' => 'Crontab schedule expression'])->label(false) ?>
 
-    <?= $form->field($model, 'route')->dropDownList($routesList, ['prompt' => 'Select route', 'style' => 'margin-bottom: 35px' ])->label(false) ?>
-
+    <div style="margin-bottom: 35px">
+        <?= $form->field($model, 'route')->dropDownList($routesList, ['prompt' => 'Select route' ])->label(false) ?>
+    </div>
+    
     <?= $form->field($model, 'params')->textarea(['rows' => '3', 'placeholder' => 'Must be a valid json string or empty'])->label(false) ?>
 
     <div class="form-group">
