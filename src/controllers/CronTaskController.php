@@ -236,7 +236,7 @@ class CronTaskController extends Controller
                 $this->module->phpBin,
                 $this->module->getYiiBootstrap(),
                 $this->module->getExecRoute(),
-                $this->module->outputSetting,
+                $this->module->outputSetting
             )
         ]);
     }
