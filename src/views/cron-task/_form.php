@@ -12,11 +12,11 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'schedule')->textInput(['maxlength' => true, 'placeholder' => 'Crontab schedule expression']) ?>
+    <?= $form->field($model, 'schedule')->textInput(['maxlength' => true, 'placeholder' => 'Crontab schedule expression'])->label(false) ?>
 
-    <?= $form->field($model, 'route')->dropDownList($routesList, ['prompt' => 'Select route']) ?>
+    <?= $form->field($model, 'route')->dropDownList($routesList, ['prompt' => 'Select route', 'style' => 'margin-bottom: 35px' ])->label(false) ?>
 
-    <?= $form->field($model, 'params')->textarea(['rows' => '3', 'placeholder' => 'Must be a valid json string or empty']) ?>
+    <?= $form->field($model, 'params')->textarea(['rows' => '3', 'placeholder' => 'Must be a valid json string or empty'])->label(false) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
